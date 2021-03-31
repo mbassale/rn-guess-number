@@ -42,7 +42,7 @@ const StartGameScreen = props => {
       <Card style={styles.summaryContainer}>
         <Text>You selected</Text>
         <NumberContainer>{selectedNumber}</NumberContainer>
-        <Button title="Start Game" />
+        <Button title="Start Game" onPress={() => props.onStartGame(selectedNumber)}/>
       </Card>
     );
   }
@@ -53,7 +53,7 @@ const StartGameScreen = props => {
         <Text style={styles.title}>Start a new game!</Text>
         <Card style={styles.inputContainer}>
           <Text>Select a number</Text>
-          <Input style={styles.input} blurOnSubmit autoCapitalize='none' autoCorrect='none' keyboardType='number-pad'
+          <Input style={styles.input} blurOnSubmit autoCapitalize='none' autoCorrect={false} keyboardType='number-pad'
                  maxLength={2} onChangeText={numberInputHandler} value={enteredValue}/>
           <View style={styles.buttonContainer}>
             <View style={styles.button}><Button color={Colors.accent} title="Reset" onPress={resetInputHandler}/></View>
