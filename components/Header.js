@@ -20,6 +20,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   },
   headerTitle: {
+    fontFamily: 'open-sans-bold',
     color: 'black',
     fontSize: 18
   }
